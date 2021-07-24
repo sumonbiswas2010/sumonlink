@@ -1,0 +1,30 @@
+.middle {
+    justify-content: center;
+    color: red;
+}
+
+.red {
+    color:red;
+}
+
+div {
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display:inline-block;
+    width:100px;
+    height:20px;
+}
+
+.center {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+input {
+    width:200px;
+    height: 30px;
+}

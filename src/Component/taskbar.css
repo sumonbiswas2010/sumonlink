@@ -1,0 +1,26 @@
+.taskbar {
+    height:50px;
+    width: 100%;
+    background-color:green;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.taskbar a{
+    margin-top: 10px;
+    display: inline-block;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.taskbar a:active {
+    color: black;
+    background-color: yellow;
+}
+
+.taskbar a:hover {
+    font-size: large;
+}

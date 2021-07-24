@@ -1,0 +1,17 @@
+.cards{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    padding: 10px;
+    border:1px solid black;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+.links p{
+    display: inline;
+}
