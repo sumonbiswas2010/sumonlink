@@ -14,7 +14,7 @@ const MyServices =  () => {
         setIsLoading(true);
         console.log("called");
         try{
-        const response = await fetch('/myservices' , {
+        const response = await fetch('https://sumonlink-backend.herokuapp.com/api/myservices' , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
