@@ -30,7 +30,7 @@ const ShortUrl = () => {
         e.preventDefault();
 
         try{
-        const response = await fetch('/shrink' , {
+        const response = await fetch('https://sumonlink-backend.herokuapp.com/api/shrink' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
