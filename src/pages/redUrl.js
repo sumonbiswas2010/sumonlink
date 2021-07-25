@@ -12,7 +12,7 @@ const RedUrl = () => {
         console.log("called")
         setIsLoading(true);
         try{
-        const response = await fetch(`https://sumonlink-backend.herokuapp.com/api/redurl/${url}` , {
+        const response = await fetch(`https://sumonlink-backend.vercel.app/api/redurl/${url}` , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

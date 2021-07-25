@@ -12,7 +12,7 @@ const Profile = () => {
         setIsLoading(true);
         //console.log("called");
         try{
-        const response = await fetch('https://sumonlink-backend.herokuapp.com/api/profile' , {
+        const response = await fetch('https://sumonlink-backend.vercel.app/api/profile' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

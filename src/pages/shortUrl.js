@@ -26,7 +26,7 @@ const ShortUrl = () => {
         setIsLoading(true);
         console.log("called");
         try{
-        const response = await fetch('http://localhost:8080/api/userlogincheck' , {
+        const response = await fetch('https://sumonlink-backend.vercel.app/api/userlogincheck' , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const ShortUrl = () => {
         e.preventDefault();
 
         try{
-        const response = await fetch('https://sumonlink-backend.herokuapp.com/api/shrink' , {
+        const response = await fetch('https://sumonlink-backend.vercel.app/api/shrink' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
