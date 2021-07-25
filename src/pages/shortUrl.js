@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Loading from '../Component/Loading'
 
 const ShortUrl = () => {
@@ -10,6 +10,7 @@ const ShortUrl = () => {
     const [loading, setIsLoading] = useState()
     const [msg, setMsg] = useState()
     const [done, setDone] = useState()
+    const [loggedIn, setLoggedIn] = useState()
 
     const fullChange = (e) => {
         setDone(false)
@@ -21,6 +22,40 @@ const ShortUrl = () => {
     }
 
     const token = localStorage.getItem("token")
+    const loginCheck = async () => {
+        setIsLoading(true);
+        console.log("called");
+        try{
+        const response = await fetch('http://localhost:8080/api/userlogincheck' , {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }
+        });
+        //const responseData = await response.json();
+        if(response.ok) {
+            setLoggedIn(true)
+        }
+        else {
+            setLoggedIn(false)
+            console.log("Token Error")
+        }
+        }
+        catch {
+            console.log("Catch")
+        }
+        setIsLoading(false)
+    };
+    function App() {
+        useEffect(() => {
+            if(token){
+                loginCheck()
+            }
+            
+        }, []);
+    } 
+    App();
 
 
     const urlShrink = async e => {
@@ -66,7 +101,9 @@ const ShortUrl = () => {
 
         {loading && <Loading />}
 
-        {!loading && <div>
+        {!loading && !loggedIn && <p className="center">Please Login to use the tool!</p>}
+
+        {!loading && loggedIn && <div>
             <form>
             <br></br>
             <label className="url">Full URL: </label>
