@@ -7,12 +7,14 @@ const Home = () => {
   const[isLoading, setIsLoading] =useState();
   const [temp, setTemp] =useState();
   const [aTemp, setAtemp] = useState();
+  const [rating, setRating] = useState();
+
   const getWeather = async() => {
     setIsLoading(true)
 
     console.log("called");
     try{
-    const response = await fetch('https://api.weatherapi.com/v1/current.json?key=e4bdd4326ac64b2987c93822211407&q=Bagerhat&aqi=no' , {
+    const response = await fetch('https://api.weatherapi.com/v1/current.json?key=e4bdd4326ac64b2987c93822211407&q=Dhaka&aqi=no' , {
         method: 'GET'
         
     });
@@ -33,11 +35,35 @@ const Home = () => {
       }
     }
 
+    const getRating = async() => {
+      setIsLoading(true)
+  
+      try{
+      const response = await fetch('https://sumonlink-backend.vercel.app/api/ratings' , {
+          method: 'POST'
+          
+      });
+      const responseData = await response.json();
+  
+      if(response.ok) {
+        setRating(responseData.rating)
+      }
+      setIsLoading(false)
+      
+      
+      }
+        catch {
+          setIsLoading(false)
+          console.log("catch")
+        }
+      }
+
   
 
   function App() {
     useEffect(() => {
         getWeather()
+        getRating()
     }, []);
   } 
   App();
@@ -49,12 +75,14 @@ const Home = () => {
       <div>
       {isLoading && <Loading />}
       {!isLoading &&
-    <div className="App">
-      <div>HomePage</div>
+    <div className="App center">
+      <h3>HomePage</h3>
       <p>You can shorten your custom URL <a href="/shorturl">Here</a></p>
+      <p>Site Rating: {rating} Out of 5!</p>
+      <img className="homeimg" src="../open-graph.png"></img>
       
-      <br></br> <br></br>
-      <p><b>Current Temperature in Bagerhat: {temp}</b></p>
+      <br></br>
+      <p><b>Current Temperature in Dhaka, Bangladesh: {temp}</b></p>
       <p><b>Feels Like: {aTemp}</b></p>
     </div>
     }

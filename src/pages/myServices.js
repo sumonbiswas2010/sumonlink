@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import MyServicesData from '../Component/myServicesData'
 import Loading from '../Component/Loading'
 
-const MyServices =  () => {
+const MyServices =  (props) => {
 
     const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState();
@@ -10,6 +10,15 @@ const MyServices =  () => {
     const [ok, setOk] = useState();
     let token = localStorage.getItem("token")
 
+    function App() {
+        useEffect(() => {
+            setLoggedin(props.login);
+            if(token){
+                setLoggedin(true)
+            }
+        }, [token]);
+    } 
+    App();
     const getData = async () => {
         setIsLoading(true);
         console.log("called");
@@ -60,9 +69,10 @@ const MyServices =  () => {
 
     return (
         <div>
-            <p>My Services</p>
-            {isLoading && <Loading/>}
+            <h2 className="center">My Services</h2>
             {!loggedIn && <p>Please log in to view</p>}
+            {isLoading && <Loading/>}
+            
             {!isLoading &&
             <div className="container">
             {data &&

@@ -1,0 +1,29 @@
+.rateLabel {
+    width: 230px !important;
+    height:20px !important;
+    padding-left: 20px;
+}
+
+.center{
+    text-align: center !important;
+}
+.btn {
+    color: #fff !important;
+    background-color: green;
+    border-radius:5%;
+    height:45px;
+    padding:5px;
+    font-weight: bold;;
+}
+
+.btn:hover{
+    cursor: grab;
+    background-color:red;
+    color:whitesmoke !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn:active{
+    padding-top: 10px;
+    color:black !important;
+}

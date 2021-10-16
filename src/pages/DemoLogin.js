@@ -4,7 +4,7 @@ import Loading from '../Component/Loading'
 //import Login from '../Component/Sdata/Login'
 import MyServices from './myServices';
 
-const DemoLogin = () => {
+const DemoLogin = (props) => {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -20,6 +20,7 @@ const DemoLogin = () => {
     const [img, setImg] = useState();
     const[type, setType] = useState();
     let token = localStorage.getItem("token")
+    
     const loginCheck = async () => {
         setIsLoading(true);
         console.log("called");
@@ -32,9 +33,11 @@ const DemoLogin = () => {
             }
         });
         const responseData = await response.json();
+        console.log(responseData)
         if(response.ok) {
-            setLoggedIn(true)
             setData(responseData.user.user.name)
+            props.login(true)
+            setLoggedIn(true)
         }
         else {
             setLoggedIn(false)
@@ -48,7 +51,8 @@ const DemoLogin = () => {
     };
     function App() {
         useEffect(() => {
-            if(token){
+            
+            if(token) {
                 loginCheck()
             }
             
@@ -111,10 +115,14 @@ const DemoLogin = () => {
         });
         const responseData = await response.json();
         if(response.ok) {
+            console.log("login done")
             localStorage.setItem("name", JSON.stringify(responseData.session))
-        localStorage.setItem("token", JSON.stringify(responseData.jsontoken))
+            localStorage.setItem("token", JSON.stringify(responseData.jsontoken))
+            props.login(true)  
             setLoggedIn(true)
+             
             setData(responseData.name)
+            
         }
         else {setMsg("Wrong Credentials")}
         setIsLoading(false)

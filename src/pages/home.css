@@ -2,7 +2,29 @@
     justify-content: center;
     color: red;
 }
+.center{
+
+}
 
 .red {
     color:red
 }
+
+.homeimg{
+    width: 30% !important;
+    height: 30% !important;
+}
+
+@media screen and (min-width: 480px) {
+    .homeimg{
+        width: 70% !important;
+        height: 70% !important;
+    }
+  }
+
+  @media screen and (min-width: 780px) {
+    .homeimg{
+        width: 40% !important;
+        height: 40% !important;
+    }
+  }

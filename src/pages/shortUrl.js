@@ -15,6 +15,7 @@ const ShortUrl = () => {
     const fullChange = (e) => {
         setDone(false)
         setFull(e.target.value)
+        setShort(getRandomString(5))
     }
     const shortChange = (e) => {
         setDone(false)
@@ -93,6 +94,17 @@ const ShortUrl = () => {
         setIsLoading(false)
     }
     }
+
+    function getRandomString(length) {
+        var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var result = '';
+        for ( var i = 0; i < length; i++ ) {
+            result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+        }
+        return result;
+    }
+
+    console.log(getRandomString(5))
     
 
     return (
@@ -104,6 +116,8 @@ const ShortUrl = () => {
         {!loading && !loggedIn && <p className="center">Please Login to use the tool!</p>}
 
         {!loading && loggedIn && <div>
+            <br></br>
+            <p className="center">Please fill the fields as your desire or get a random short url!</p>
             <form>
             <br></br>
             <label className="url">Full URL: </label>
@@ -113,16 +127,17 @@ const ShortUrl = () => {
             <label className="url">Desired Short URL: </label>
             <input value={short} onChange={shortChange}  type="text" required></input>
             <br></br><br></br>
-            <button type="submit" onClick={urlShrink}>Shrink URL</button>
+            <button className="shrinkbtn" type="submit" onClick={urlShrink}>Shrink URL</button>
             </form>
         </div>}
         <br></br><br></br>
         <br></br>
-        {msg && <p>{msg}</p>}
-        {done &&
-            <div>
+        {!loading && msg && <p className="center">{msg}</p>}
+        {done && !loading &&
+            <div className="center">
                 <p>Full URL: {full}</p>
                 <p>Short URL: <a href={short}>{short}</a></p>
+                <h4>Now can go to {full} by clicking <a href={short}>sumonlink.netlify.app/{short}</a></h4>
             </div>}
 
         </React.Fragment>

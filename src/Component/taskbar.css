@@ -18,9 +18,12 @@
 
 .taskbar a:active {
     color: black;
-    background-color: yellow;
+    background-color: white;
+    padding: 15px !important;
+    margin: 0px !important;
 }
 
 .taskbar a:hover {
-    font-size: large;
+    padding-top: 5px;
+    color: black;
 }

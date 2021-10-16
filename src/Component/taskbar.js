@@ -2,24 +2,21 @@ import React, {useState, useEffect} from 'react'
 import './taskbar.css'
 import { Redirect  } from 'react-router-dom';
 
-const Taskbar = () => {
+const Taskbar = (props) => {
 
     const [loggedIn, setIsLoggedIn] = useState();
-    
-    let token;
-    
+    const token = localStorage.getItem("token")
     function App() {
         useEffect(() => {
-            token = localStorage.getItem("token")
-            if (!token) {
-                setIsLoggedIn(false)
-            }
-            else {
+            setIsLoggedIn(props.login);
+            if(token){
                 setIsLoggedIn(true)
             }
-        }, []);
+        }, [token]);
     } 
     App();
+
+    
     const logout = (e) => {
         if(loggedIn)
         {

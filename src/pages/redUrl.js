@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Redirect, useParams, Link} from 'react-router-dom'
-
+import './redUrl.css'
 const RedUrl = () => {
 
     const [loading, setIsLoading] = useState()
@@ -56,9 +56,9 @@ const RedUrl = () => {
     App();
 
     return(
-        
 
-        <div>OK {url}
+        <div>
+            <p id="redirect">Redirecting to your desired url. <br></br> Please wait... </p>
         {/* {full &&<Redirect to= {full}/>} */}
         <br></br><br></br><br></br>
         {full && <a href={full}>Click here: {full}</a>}

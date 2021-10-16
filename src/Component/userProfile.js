@@ -4,7 +4,7 @@ const UserProfile = (props) => {
     const data = props.data
 
     return(
-        <div key={data.id}>
+        <div className="padding-40" key={data.id}>
             <br></br>
             <p>ID: {data.id}</p>
             <p>Full Name: {data.first_name} {data.last_name}</p>

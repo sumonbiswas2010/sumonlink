@@ -14,8 +14,9 @@ div {
 
 label {
     display:inline-block;
-    width:100px;
+    width:150px;
     height:20px;
+    padding-left: 20px;
 }
 
 .center {
@@ -25,6 +26,28 @@ label {
 }
 
 input {
-    width:200px;
+    width:250px;
     height: 30px;
+}
+
+.shrinkbtn {
+    color: #fff !important;
+    background-color: green;
+    border-radius:5%;
+    height:45px;
+    padding:5px;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+.shrinkbtn:hover{
+    cursor: grab;
+    background-color:red;
+    color:whitesmoke !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.shrinkbtn:active{
+    padding-top: 10px;
+    color:black !important;
 }
