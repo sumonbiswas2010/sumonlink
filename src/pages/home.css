@@ -17,14 +17,14 @@
 
 @media screen and (min-width: 480px) {
     .homeimg{
-        width: 70% !important;
-        height: 70% !important;
+        width: 80% !important;
+        height: 80% !important;
     }
   }
 
-  @media screen and (min-width: 780px) {
+@media screen and (min-width: 780px) {
     .homeimg{
         width: 40% !important;
         height: 40% !important;
     }
-  }
+}

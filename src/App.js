@@ -10,7 +10,7 @@ import Rating from './pages/rating'
 import SocialLogin from './pages/socialLogin'
 import MyServices from './pages/myServices';
 import {Switch, BrowserRouter as Router, Route} from 'react-router-dom';
-
+import './style.css'
 
 
 const App = () => {

@@ -76,14 +76,14 @@ const Home = () => {
       {isLoading && <Loading />}
       {!isLoading &&
     <div className="App center">
-      <h3>HomePage</h3>
+      <h3>Homepage</h3>
       <p>You can shorten your custom URL <a href="/shorturl">Here</a></p>
-      <p>Site Rating: {rating} Out of 5!</p>
+      <p>Site Rating: {rating} Out of 5! You can rate <a href="/rating">Here</a></p>
       <img className="homeimg" src="../open-graph.png"></img>
       
       <br></br>
-      <p><b>Current Temperature in Dhaka, Bangladesh: {temp}</b></p>
-      <p><b>Feels Like: {aTemp}</b></p>
+      <p><b>Current Temperature in Dhaka, Bangladesh: {temp}&#176;C</b></p>
+      <p><b>Feels Like: {aTemp}&#176;C</b></p>
     </div>
     }
     </div>

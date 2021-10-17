@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Loading from '../Component/Loading'
+import './shortUrl.css'
 
 const ShortUrl = () => {
 
@@ -118,14 +119,14 @@ const ShortUrl = () => {
         {!loading && loggedIn && <div>
             <br></br>
             <p className="center">Please fill the fields as your desire or get a random short url!</p>
-            <form>
+            <form id="shrink">
             <br></br>
             <label className="url">Full URL: </label>
-            <input value={full} onChange={fullChange} type="text" required></input>
+            <input value={full} onChange={fullChange} type="text" placeholder="www.example.com/example/bigurl" required></input>
             <br></br>
             <br></br>
             <label className="url">Desired Short URL: </label>
-            <input value={short} onChange={shortChange}  type="text" required></input>
+            <input value={short} onChange={shortChange}  type="text" required placeholder="smallurl"></input>
             <br></br><br></br>
             <button className="shrinkbtn" type="submit" onClick={urlShrink}>Shrink URL</button>
             </form>

@@ -6,3 +6,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#redurlcontainer
+{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: aqua;
+}
+
+.nolinkfound  {
+    color: white !important;
+}
+.nolinkfound a {
+    color: aqua !important;
+}

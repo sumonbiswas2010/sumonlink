@@ -47,7 +47,7 @@ const Profile = () => {
 
     return(
         <div>
-            <h1 className="center">My Profile</h1>
+            <h2 className="center">My Profile</h2>
             {loading && <Loading />}
             {!loading && userFound && <UserProfile data={userData}/>}
             {!loading && <h3 className="center">Please Rate your Experience <a href="/rating">Here</a></h3>}

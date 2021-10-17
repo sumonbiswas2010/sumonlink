@@ -57,13 +57,13 @@ const RedUrl = () => {
 
     return(
 
-        <div>
+        <div id="redurlcontainer">
             <p id="redirect">Redirecting to your desired url. <br></br> Please wait... </p>
         {/* {full &&<Redirect to= {full}/>} */}
         <br></br><br></br><br></br>
         {full && <a href={full}>Click here: {full}</a>}
         <br></br><br></br><br></br>
-        {msg && <h3 className="center" dangerouslySetInnerHTML={{__html: msg}} />}
+        {msg && <h4 className="center nolinkfound" dangerouslySetInnerHTML={{__html: msg}} />}
         
         </div>
     )
