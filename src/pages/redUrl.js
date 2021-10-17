@@ -35,7 +35,7 @@ const RedUrl = () => {
         }
         else {
             console.log("Error")
-            setMsg("Error")
+            setMsg("No Link Found. <br> Maybe Create one at <a href='/shorturl'>Here</a>")
         }
           
         }
@@ -63,7 +63,8 @@ const RedUrl = () => {
         <br></br><br></br><br></br>
         {full && <a href={full}>Click here: {full}</a>}
         <br></br><br></br><br></br>
-        {msg && <p>{msg}</p>}
+        {msg && <h3 className="center" dangerouslySetInnerHTML={{__html: msg}} />}
+        
         </div>
     )
 }

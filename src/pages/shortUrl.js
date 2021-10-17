@@ -113,7 +113,7 @@ const ShortUrl = () => {
 
         {loading && <Loading />}
 
-        {!loading && !loggedIn && <p className="center">Please Login to use the tool!</p>}
+        {!loading && !loggedIn &&<div> <br></br> <h3 className="center">Please <a href="/auth">Login</a> to use the tool!</h3></div>}
 
         {!loading && loggedIn && <div>
             <br></br>

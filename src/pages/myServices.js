@@ -70,7 +70,7 @@ const MyServices =  (props) => {
     return (
         <div>
             <h2 className="center">My Services</h2>
-            {!loggedIn && <p>Please log in to view</p>}
+            {!loggedIn &&<div> <br></br> <h3 className="center">Please <a href="/auth">Login</a> to view this page.</h3></div>}
             {isLoading && <Loading/>}
             
             {!isLoading &&

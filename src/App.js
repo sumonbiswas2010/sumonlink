@@ -91,7 +91,7 @@ const loginStatus = (x) => {
       </Route>
 
       
-      <Route path="/demo" exact>
+      <Route path="/auth" exact>
       <Taskbar login={loggedIn}/>
         <DemoLogin login={loginStatus}/>
       </Route>

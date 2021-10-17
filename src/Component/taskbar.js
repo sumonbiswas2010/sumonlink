@@ -33,7 +33,7 @@ const Taskbar = (props) => {
 
     return(
         <div className="taskbar">
-            <a href="/demo" onClick={logout}>{loggedIn? 'Logout': 'Login'}</a>
+            <a href="/auth" onClick={logout}>{loggedIn? 'Logout': 'Login'}</a>
             {loggedIn &&<a href="/profile">My Profile</a>}
             <a href="/myservices">My Services</a>
             <a href="/shorturl">URL Shortener</a>
