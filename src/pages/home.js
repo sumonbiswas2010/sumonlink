@@ -72,7 +72,7 @@ const Home = () => {
 
 
     return(
-      <div>
+      <div id="homeAll">
       {isLoading && <Loading />}
       {!isLoading &&
     <div className="App center">

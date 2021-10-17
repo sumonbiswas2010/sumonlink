@@ -13,3 +13,13 @@
     height: 100% !important;
     
 }
+
+.loadingtext
+{
+    text-align: center !important;
+    font-size: 20px;
+    position: fixed;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

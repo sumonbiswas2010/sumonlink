@@ -47,6 +47,7 @@ const Profile = () => {
 
     return(
         <div>
+            <br></br>
             <h2 className="center">My Profile</h2>
             {loading && <Loading />}
             {!loading && userFound && <UserProfile data={userData}/>}

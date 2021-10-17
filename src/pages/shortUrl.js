@@ -116,7 +116,7 @@ const ShortUrl = () => {
 
         {!loading && !loggedIn &&<div> <br></br> <h3 className="center">Please <a href="/auth">Login</a> to use the tool!</h3></div>}
 
-        {!loading && loggedIn && <div>
+        {!loading && loggedIn && <div id="main-content">
             <br></br>
             <p className="center">Please fill the fields as your desire or get a random short url!</p>
             <form id="shrink">

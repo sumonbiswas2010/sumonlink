@@ -8,7 +8,7 @@ const Loading = () => {
     <div className="loadingContainer">
       <img className='loadingimg' src="https://i.pinimg.com/originals/ba/d0/0f/bad00f07a2e9965ef79eebd4e702df6e.gif"/>
       <br></br><br></br>
-      <p className='loadingimg'>Loading, Please Wait...</p>
+      <p className='loadingtext'>Your Page is Loading <br></br> Please wait... </p>
       <br></br>
       <br></br>
       <br></br>

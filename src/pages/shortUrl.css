@@ -1,10 +1,57 @@
+#main-content
+{
+    width: 95% !important;
+    margin: 0 auto !important;
+    
+}
+.url {
+    padding-left: 5px;
+    width: 150px !important;
+}
+.shrinkbtn {
+    color: black !important;
+    background-color: greenyellow;
+    border-radius:5%;
+    height:45px;
+    width: 150px;
+    padding:5px;
+    font-weight: bold;
+    margin-left: 170px;
+}
 
+.shrinkbtn:hover{
+    cursor: grab;
+    background-color:red;
+    color:whitesmoke !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.shrinkbtn:active{
+    padding-top: 10px;
+    color:black !important;
+}
+
+
+@media screen and (min-width: 700px) 
+{
+    #main-content input {
+        width: 400px !important;
+    }
+}
 
 @media screen and (max-width: 500px) {
+    .url
+    {
+        width: 25% !important;
+        font-size: 13px;
+    }
     .shrinkbtn{
         width: 100%;
         margin: 0 auto;
         border: none;
         border-radius:4%;
+    }
+    #main-content input {
+        width: 70%;
     }
 }

@@ -193,7 +193,7 @@ const DemoLogin = (props) => {
       <label>Password: </label>
       <input onChange={handlePasswordChange} name="password" type="password" required></input>
       <br></br><br></br>
-      <button className="center"onClick={signUpMode? signUpHandler : loginHandler } type="submit">Submit</button>
+      <button className="center authbutton"onClick={signUpMode? signUpHandler : loginHandler } type="submit">Submit</button>
       <br></br> <br></br> <br></br>
       <p className="red center">{msg}</p>
       </div>

@@ -2,8 +2,14 @@
     justify-content: center;
     color: red;
 }
-.center{
-
+#homeAll {
+    margin-top: 0px !important;
+    width: 100%;
+    height: 100vh;
+}
+#homeAll h3 {
+    margin-top: 0px;
+    padding-top: 15px;
 }
 
 .red {
@@ -20,7 +26,7 @@
         width: 80% !important;
         height: 80% !important;
     }
-  }
+}
 
 @media screen and (min-width: 780px) {
     .homeimg{

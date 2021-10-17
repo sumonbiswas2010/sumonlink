@@ -10,22 +10,22 @@
 }
 
 .taskbar a{
-    margin-top: 13px;
+    margin-top: 15px;
     display: inline-block;
     background: transparent;
-    color: white;
+    color: aqua !important;
     text-decoration: none;
     font-weight: bold;
 }
 
-.taskbar a:active {
+.taskbar a:focus {
     color: black !important;
-    background-color: white;
+    background-color: gray;
     padding: 15px !important;
     margin: 0px !important;
 }
 
 .taskbar a:hover {
     padding-top: 5px;
-    color: aqua;
+    color: white !important;
 }

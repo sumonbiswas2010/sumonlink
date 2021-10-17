@@ -29,25 +29,25 @@ input {
     width:250px;
     height: 30px;
 }
-
-.shrinkbtn {
-    color: #fff !important;
-    background-color: green;
+.authbutton {
+    color: black !important;
+    background-color: greenyellow;
     border-radius:5%;
-    height:45px;
+    height:40px;
+    width: 110px;
     padding:5px;
     font-weight: bold;
-    margin-left: 150px;
 }
 
-.shrinkbtn:hover{
+.authbutton:hover{
     cursor: grab;
     background-color:red;
     color:whitesmoke !important;
     padding-left: 10px;
     padding-right: 10px;
 }
-.shrinkbtn:active{
+.authbutton:active{
     padding-top: 10px;
     color:black !important;
 }
+

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Redirect, useParams, Link} from 'react-router-dom'
+import Loading from '../Component/Loading'
 import './redUrl.css'
 const RedUrl = () => {
 
@@ -58,13 +59,9 @@ const RedUrl = () => {
     return(
 
         <div id="redurlcontainer">
-            <p id="redirect">Redirecting to your desired url. <br></br> Please wait... </p>
-        {/* {full &&<Redirect to= {full}/>} */}
-        <br></br><br></br><br></br>
-        {full && <a href={full}>Click here: {full}</a>}
-        <br></br><br></br><br></br>
-        {msg && <h4 className="center nolinkfound" dangerouslySetInnerHTML={{__html: msg}} />}
-        
+            {!msg && <Loading/>}
+            {full && <a href={full}>Click here: {full}</a>}
+            {msg && <h4 className="center nolinkfound" dangerouslySetInnerHTML={{__html: msg}} />}
         </div>
     )
 }
