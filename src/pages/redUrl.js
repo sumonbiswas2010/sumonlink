@@ -13,7 +13,7 @@ const RedUrl = () => {
         console.log("called")
         setIsLoading(true);
         try{
-        const response = await fetch(`https://sumonlink-backend.vercel.app/api/redurl/${url}` , {
+        const response = await fetch(`https://api.link.sumon.com.bd/api/redurl/${url}` , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

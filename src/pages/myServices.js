@@ -23,7 +23,7 @@ const MyServices =  (props) => {
         setIsLoading(true);
         console.log("called");
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/myservices' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/myservices' , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

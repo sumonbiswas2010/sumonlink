@@ -17,7 +17,7 @@ const Rating = (props) => {
         console.log("called")
         setIsLoading(true)
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/checkrating' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/checkrating' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const Rating = (props) => {
         setIsLoading(true)
         e.preventDefault();
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/rating' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/rating' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

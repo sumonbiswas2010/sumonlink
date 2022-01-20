@@ -39,7 +39,7 @@ const Home = () => {
       setIsLoading(true)
   
       try{
-      const response = await fetch('https://sumonlink-backend.vercel.app/api/ratings' , {
+      const response = await fetch('https://api.link.sumon.com.bd/api/ratings' , {
           method: 'POST'
           
       });

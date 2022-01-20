@@ -12,7 +12,7 @@ const Profile = () => {
         setIsLoading(true);
         //console.log("called");
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/profile' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/profile' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

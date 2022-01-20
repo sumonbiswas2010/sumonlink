@@ -25,7 +25,7 @@ const DemoLogin = (props) => {
         setIsLoading(true);
         console.log("called");
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/userlogincheck' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api' , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const DemoLogin = (props) => {
         e.preventDefault();
 
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -101,7 +101,7 @@ const DemoLogin = (props) => {
 
         try{
 
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/login' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/login' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

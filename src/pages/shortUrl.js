@@ -28,7 +28,7 @@ const ShortUrl = () => {
         setIsLoading(true);
         console.log("called");
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/userlogincheck' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/userlogincheck' , {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const ShortUrl = () => {
         e.preventDefault();
 
         try{
-        const response = await fetch('https://sumonlink-backend.vercel.app/api/shrink' , {
+        const response = await fetch('https://api.link.sumon.com.bd/api/shrink' , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
